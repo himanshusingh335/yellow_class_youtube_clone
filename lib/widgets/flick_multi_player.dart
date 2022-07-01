@@ -49,7 +49,9 @@ class _FlickMultiPlayerState extends State<FlickMultiPlayer> {
     return VisibilityDetector(
       key: ObjectKey(flickManager),
       onVisibilityChanged: (visiblityInfo) {
-        if (visiblityInfo.visibleFraction == 1 && mounted) {
+        //print(
+        //   '///////////////////////////////${visiblityInfo.visibleFraction}');
+        if (visiblityInfo.visibleFraction > 0.9 && mounted) {
           widget.flickMultiManager.play(flickManager);
         }
       },
