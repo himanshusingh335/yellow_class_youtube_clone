@@ -22,7 +22,7 @@ class YellowClassYoutube extends StatelessWidget {
       initialRoute: HomeScreen.routeName,
       routes: {
         HomeScreen.routeName: (context) => HomeScreen(
-              listData: data,
+              items: data,
             ),
       },
     );
