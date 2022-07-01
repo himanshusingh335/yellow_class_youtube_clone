@@ -18,7 +18,7 @@ class FeedPlayerPortraitControls extends StatelessWidget {
         Provider.of<FlickDisplayManager>(context);
     return Container(
       color: Colors.transparent,
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
@@ -27,12 +27,12 @@ class FeedPlayerPortraitControls extends StatelessWidget {
             child: Align(
               alignment: Alignment.topRight,
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
                 decoration: BoxDecoration(
                   color: Colors.black38,
                   borderRadius: BorderRadius.circular(20),
                 ),
-                child: FlickLeftDuration(),
+                child: const FlickLeftDuration(),
               ),
             ),
           ),
@@ -42,7 +42,7 @@ class FeedPlayerPortraitControls extends StatelessWidget {
                 flickMultiManager?.toggleMute();
                 displayManager.handleShowPlayerControls();
               },
-              child: FlickSeekVideoAction(
+              child: const FlickSeekVideoAction(
                 child: Center(child: FlickVideoBuffer()),
               ),
             ),
@@ -54,7 +54,7 @@ class FeedPlayerPortraitControls extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.all(2),
+                  padding: const EdgeInsets.all(2),
                   decoration: BoxDecoration(
                     color: Colors.black38,
                     borderRadius: BorderRadius.circular(20),
@@ -64,7 +64,6 @@ class FeedPlayerPortraitControls extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                // FlickFullScreenToggle(),
               ],
             ),
           ),
