@@ -6,8 +6,10 @@ import '../services/flick_video_player.dart';
 import '../widgets/flick_multi_player.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key, required this.items}) : super(key: key);
+  const HomeScreen({Key? key, required this.items, required this.title})
+      : super(key: key);
   final List<MyMedia> items;
+  final String title;
 
   static String routeName = '/';
 
@@ -34,8 +36,52 @@ class _HomeScreenState extends State<HomeScreen> {
         }
       },
       child: Scaffold(
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              DrawerHeader(
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                ),
+                child: Image.network(
+                  'https://images.yourstory.com/cs/images/companies/ce4c89ff9d3d-YellowClassLogo-1611551749492.jpg',
+                ),
+              ),
+              ListTile(
+                leading: const Icon(Icons.account_box),
+                title: const Text('My Account'),
+                onTap: () {},
+              ),
+              ListTile(
+                leading: const Icon(Icons.monetization_on),
+                title: const Text('Purchases and Memberships'),
+                onTap: () {},
+              ),
+              ListTile(
+                leading: const Icon(Icons.settings),
+                title: const Text('Settings'),
+                onTap: () {},
+              ),
+            ],
+          ),
+        ),
         appBar: AppBar(
-          title: const Text('Youtube'),
+          title: Text(widget.title),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.cast),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.notifications),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.search),
+            ),
+          ],
         ),
         body: ListView.separated(
           shrinkWrap: true,
@@ -66,10 +112,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     title: Padding(
                       padding: const EdgeInsets.only(bottom: 4.0),
-                      child: Text(widget.items[index].title!),
+                      child: Text(
+                        widget.items[index].title!,
+                        style: const TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold),
+                      ),
                     ),
-                    subtitle: Text(
-                        "${widget.items[index].title} . 20000 . 25/6/2022"),
+                    subtitle: const Text(
+                      "20k views . 25/6/2022",
+                    ),
                     trailing: Container(
                         margin: const EdgeInsets.only(bottom: 20.0),
                         child: const Icon(Icons.more_vert)),

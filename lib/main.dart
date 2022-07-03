@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yellow_class_youtube_clone/models/my_media.dart';
-import 'package:yellow_class_youtube_clone/screens/home_screen.dart';
+import 'package:yellow_class_youtube_clone/screens/navigation_screen.dart';
 import 'package:yellow_class_youtube_clone/services/fetch_video_list.dart';
 
 void main() {
@@ -16,14 +16,11 @@ class YellowClassYoutube extends StatelessWidget {
     List<MyMedia> data = getList(jsonStringList);
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      initialRoute: HomeScreen.routeName,
+      theme: ThemeData(primarySwatch: Colors.yellow),
+      darkTheme: ThemeData.dark(),
+      initialRoute: MyNavigationBar.routeName,
       routes: {
-        HomeScreen.routeName: (context) => HomeScreen(
-              items: data,
-            ),
+        MyNavigationBar.routeName: (context) => const MyNavigationBar(),
       },
     );
   }
