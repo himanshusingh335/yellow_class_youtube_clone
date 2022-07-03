@@ -40,3 +40,4 @@ flutter run --release
 
 # Summary
 
+A youtube clone with infinite scrolling list of cards where by default the card will display an image. If the user stops scrolling, then only the first card in the viewport will start playing a video. The video plays while the card is visible on the screen stops as soon as it moves out of the viewport.
