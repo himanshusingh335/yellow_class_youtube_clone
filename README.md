@@ -1,16 +1,42 @@
-# yellow_class_youtube_clone
+# Yellow Class Youtube Clone
 
-A new Flutter project.
+<p align="left">
+crafted with <span style="color: #8b0000;">&hearts;</span> by Himanshu Singh
+</p>
 
-## Getting Started
+## Built With
 
-This project is a starting point for a Flutter application.
+This app is built using [Flutter](https://flutter.dev/)
+## Installation 🔧
 
-A few resources to get you started if this is your first Flutter project:
+This project requires installation of [Flutter](https://flutter.dev/).
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Download or clone this repo by using the link below:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+https://github.com/himanshusingh335/yellow_class_youtube_clone.git
+```
+
+**Step 2:**
+
+Go to project root and execute the following command in console to get the required dependencies: 
+
+```
+flutter pub get 
+```
+
+**Step 3:**
+
+Run the project in debug using:
+
+```
+flutter run
+```
+
+or Run the project in debug using:
+```
+flutter run --release
+```
+
+# Summary
+
