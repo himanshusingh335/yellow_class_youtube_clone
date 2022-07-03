@@ -5,7 +5,7 @@ import '../services/fetch_video_list.dart';
 class MyNavigationBar extends StatefulWidget {
   const MyNavigationBar({Key? key}) : super(key: key);
 
-  static const String routeName = '/home';
+  static const String routeName = '/';
 
   @override
   MyNavigationBarState createState() => MyNavigationBarState();
@@ -16,7 +16,7 @@ class MyNavigationBarState extends State<MyNavigationBar> {
   static List<Widget> widgetOptions = <Widget>[
     HomeScreen(
       items: getList(jsonStringList),
-      title: 'Home',
+      title: 'Your Classes',
     ),
     HomeScreen(items: getList(jsonStringList), title: 'Shorts'),
     HomeScreen(items: getList(jsonStringList), title: 'Create'),

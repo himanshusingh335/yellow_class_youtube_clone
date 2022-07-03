@@ -11,8 +11,6 @@ class HomeScreen extends StatefulWidget {
   final List<MyMedia> items;
   final String title;
 
-  static String routeName = '/';
-
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
